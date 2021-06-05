@@ -3,14 +3,13 @@
 from django.urls import path
 from . import views
 
-from django.views.generic import TemplateView
+from django.views import generic
 
 app_name = 'core'
+
 urlpatterns = [
-    # path('', views.item_list, name='item-list'),
-    path('', TemplateView.as_view(template_name='home-page.html')),
-    path('product/', TemplateView.as_view(template_name='product-page.html'), name='product'),
-    path('checkout/', TemplateView.as_view(template_name='checkout-page.html'), name='checkout'),
-
-
+    path('', views.HomeView.as_view(), name='home'),
+    path('product/<slug>/', views.ItemDetailView.as_view(), name='product'),
+    path('add-to-cart/<slug>/', views.add_to_cart, name='add-to-cart'),
 ]
+
