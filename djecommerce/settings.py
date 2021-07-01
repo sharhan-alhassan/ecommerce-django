@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'crispy_forms',
+    'django_countries',
 ]
 
 MIDDLEWARE = [
@@ -109,3 +110,7 @@ SITE_ID = 1
 
 # Django Crispy forms
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# Stripe 
+STRIPE_TEST_PUBLISHABLE_KEY = 'pk_test_51IesDgCcITaW7BkXiUm2DTKZGSdYo9uJrH3784EPnB69gQDsp68lvFTrExs7gJlI6WYulrsUlKxmHVchIt5FAW9s000jHiI0lK'
+STRIPE_TEST_SECRET_KEY = 'sk_test_51IesDgCcITaW7BkXVELLR4MqyPWObH81K2E9BebOoKg78pq0Bd9sRAfINts66ZgXMtY4VZuQaxmEsb4XZeyh0dhI009S8Yej7V'
